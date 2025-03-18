@@ -1,8 +1,10 @@
-import Login from "./pages/Login";
+
+import Pagina404 from "./pages/Pagina404";
+
 
 function App() {
   return (
-        <Login />
+        <Pagina404 />
   );
 }
 
