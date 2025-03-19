@@ -1,10 +1,11 @@
-
-import Pagina404 from "./pages/Pagina404";
-
+import { GlobalProvider } from "./contexts/GlobalContext";
+import AppRoutes from "./routes";
 
 function App() {
   return (
-        <Pagina404 />
+    <GlobalProvider>
+        <AppRoutes />
+    </GlobalProvider>
   );
 }
 

@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import robo from '../../files/images/robo_404.png';
 
-function Pagina404() {
+function Page404() {
     return (
         <>
             <Header />
@@ -18,4 +18,4 @@ function Pagina404() {
     );
 }
 
-export default Pagina404;
+export default Page404;

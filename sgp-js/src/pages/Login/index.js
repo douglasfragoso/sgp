@@ -1,22 +1,24 @@
-import './login.css';
+import { useState, useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 import logo from '../../files/images/sgp_logo_vertical.png';
-import { useState } from 'react';
+import './login.css';
 
 
 function Login() {
+  const {login} = useContext(GlobalContext);
   const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [manterConectado, setManterConectado] = useState(true);
+  const [password, setPassword] = useState('');
+  const [remember, setRemember] = useState(true);
   const [erro, setErro] = useState('');
 
   const fazerLogin = (e) => {
     e.preventDefault();
 
-    if (email === '' || senha === '') {
+    if (email === '' || password === '') {
       setErro('Preencha todos os campos');
     }
 
-    console.log({email, senha, manterConectado});
+    login({email, password, remember});
   }
 
   return (
@@ -44,8 +46,8 @@ function Login() {
                   <input type="password"
                     className="form-control border border-primary mb-2"
                     placeholder="Password"
-                    value={senha}
-                    onChange={(e) => setSenha(e.target.value)}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     >
                   </input>
 
@@ -53,8 +55,8 @@ function Login() {
                     <input
                       className="form-check-input"
                       type="checkbox"
-                      defaultChecked={manterConectado}
-                      onChange={() => setManterConectado(!manterConectado)}>
+                      defaultChecked={remember}
+                      onChange={() => setRemember(!remember)}>
                     </input>
                     <label className="form-check-label">
                       Mantenha-me conectado

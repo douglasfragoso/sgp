@@ -1,9 +1,12 @@
-import React from 'react';
 import logo from '../../files/images/sgp_logo_horizontal.png';
 import Button from '../Button';
-
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 function Header() {
+
+    const {logout} = useContext(GlobalContext);
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container">
@@ -37,7 +40,7 @@ function Header() {
                         </li>
                     </ul>
                 </div>
-                <Button color="danger" size="m" text="Sair" onClickBtn={() => console.log('Button clicked')} />
+                <Button color="danger" text="Sair" onClickBtn={logout} />
             </div>
         </nav>
     );
