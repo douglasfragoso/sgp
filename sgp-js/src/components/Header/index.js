@@ -27,16 +27,16 @@ function Header() {
                     </a>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Dashboard</a>
+                            <a className="nav-link active" href="/dashboard">Dashboard</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Usuários</a>
+                            <a className="nav-link active" href="/user">Usuários</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Projetos</a>
+                            <a className="nav-link active" href="/projects">Projetos</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">Tarefas</a>
+                            <a className="nav-link active" href="tasks">Tarefas</a>
                         </li>
                     </ul>
                 </div>
